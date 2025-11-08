@@ -1,0 +1,393 @@
+/* === RESET BÁSICO === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f2f2f2; /* gris claro */
+  color: #222;
+  line-height: 1.6;
+}
+
+/* === COLORES PRINCIPALES === */
+:root {
+  --color-principal: #d6c4f3; /* lavanda pastel */
+  --color-principal-hover: #b29ddf; /* lavanda más oscuro */
+  --color-titulos: #8c6fcf; /* lavanda profundo para títulos */
+  --color-fondo: #f2f2f2; /* gris claro */
+  --color-blanco: #ffffff;
+  --color-borde: #dcd1f0;
+  --color-texto: #333;
+}
+
+/* === CONTENEDOR GENERAL === */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* === ENCABEZADO === */
+.site-header {
+  background: var(--color-blanco);
+  border-bottom: 2px solid var(--color-borde);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  color: var(--color-titulos);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-nav a {
+  text-decoration: none;
+  margin-left: 1rem;
+  color: var(--color-texto);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: var(--color-titulos);
+}
+
+.btn-primary {
+  background: var(--color-principal);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--color-principal-hover);
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  color: var(--color-titulos);
+}
+
+.hero p {
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* === CARDS GRID === */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--color-blanco);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  color: var(--color-titulos);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.3rem;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-principal);
+  color: var(--color-principal);
+  background: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--color-principal);
+  color: #fff;
+}
+
+/* === PIE DE PÁGINA === */
+.site-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--color-blanco);
+  color: #666;
+  border-top: 1px solid var(--color-borde);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* ==== Estilos del Simulador ==== */
+.sim-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--color-blanco);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.sim-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: var(--color-texto);
+  font-size: 0.95rem;
+}
+
+.sim-form input,
+.sim-form select {
+  margin-top: 0.4rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  min-width: 220px;
+  transition: border-color 0.2s;
+}
+
+.sim-form input:focus,
+.sim-form select:focus {
+  border-color: var(--color-principal);
+  outline: none;
+}
+
+.sim-form button {
+  padding: 0.7rem 1.4rem;
+  background-color: var(--color-principal);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.sim-form button:hover {
+  background-color: var(--color-principal-hover);
+}
+
+/* ==== Fondo solo para la página del simulador ==== */
+.simulador-page {
+  background-color: var(--color-fondo);
+}
+
+/* ==== Formulario de Solicitud ==== */
+.credit-form {
+  background: var(--color-blanco);
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.credit-form h3 {
+  text-align: center;
+  color: var(--color-titulos);
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--color-texto);
+}
+
+.credit-form input,
+.credit-form select,
+.credit-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.credit-form input:focus,
+.credit-form select:focus,
+.credit-form textarea:focus {
+  border-color: var(--color-principal);
+  outline: none;
+}
+
+.credit-form button {
+  align-self: center;
+  background-color: var(--color-principal);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.credit-form button:hover {
+  background-color: var(--color-principal-hover);
+  transform: scale(1.05);
+}
+
+.credit-form textarea {
+  resize: none;
+}
+
+/* ==== Fondo general para solicitar crédito ==== */
+.solicitar-page {
+  background: linear-gradient(135deg, #f2f2f2, #f8f6fc);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==== Autorización de datos personales ==== */
+.consentimiento {
+  grid-column: span 2;
+  background: #f9f6ff;
+  border: 1px solid var(--color-borde);
+  padding: 1rem;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+.consentimiento input[type="checkbox"] {
+  accent-color: var(--color-principal);
+}
+
+.nota-privacidad a {
+  color: var(--color-titulos);
+  text-decoration: none;
+}
+
+.nota-privacidad a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Organización del formulario en dos columnas ===== */
+.credit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.3rem;
+}
+
+.credit-form h3 {
+  text-align: center;
+  color: #8e6fd1; /* lavanda más oscuro */
+  border-bottom: 2px solid #d6c6f0;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.credit-form input,
+.credit-form select {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s;
+}
+
+.credit-form input:focus,
+.credit-form select:focus {
+  border-color: #a17ce4;
+  outline: none;
+  box-shadow: 0 0 4px rgba(161, 124, 228, 0.3);
+}
+
+.credit-form button {
+  background-color: #a17ce4;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.credit-form button:hover {
+  background-color: #8b68ce;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-section {
+    grid-template-columns: 1fr;
+  }
+}
