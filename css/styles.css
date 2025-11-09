@@ -13,6 +13,8 @@ body {
 }
 
 /* === COLORES PRINCIPALES === */
+/* Commit 2: Estilos lavanda pastel actualizados */
+
 :root {
   --color-principal: #d6c4f3; /* lavanda pastel */
   --color-principal-hover: #b29ddf; /* lavanda más oscuro */
